@@ -1,0 +1,24 @@
+.navbar{
+    background-color: fc6998
+}
+
+.navbar-expand-lg{
+    background-color: fc6998
+}
+
+
+
+
+/* Estilos para el footer */
+.footer {
+    position: fixed; /* Posicionamiento fijo */
+    bottom: 0; /* Coloca el footer en la parte inferior de la ventana */
+    left: 0; /* Coloca el footer en el extremo izquierdo */
+    width: 100%; /* Ancho del footer al 100% del contenedor padre */
+    background-color: #f0f0f0; /* Color de fondo del footer (cambia esto según tu diseño) */
+    padding: 10px; /* Añade un poco de espacio interno para el contenido del footer */
+}
+
+.text-pink{
+    color: lightsteelblue;
+}

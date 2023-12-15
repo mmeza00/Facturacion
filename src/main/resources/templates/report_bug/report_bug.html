@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html lang="es">
+    <head th:replace="~{layout/plantilla:: head}">
+        <title>Reportar bugs</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header th:replace ="~{layout/plantilla :: header}"></header>
+        <div>
+            <!-- Espacio para reportar un bug -->
+
+            <section id="reportar-bug" class="mt-4">
+                <div class="container">
+                    <div class="row align-items-center"> 
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="card">
+                                <div class="card-header bg-danger-subtle">
+                                    <h2>Reportar un Bug</h2>
+                                </div>
+                                <div class="card-body">
+                                    <form method="POST"
+                                        th:action="@{/report_bug/guardar}" 
+                                        th:object="${reporte}"
+                                        class="was-validated"                          
+                                        enctype="multipart/form-data">
+                                        <div class="form-group row my-3">
+                                            <label class="col-md-3 my-auto" for="Nombre"></i>Nombre:</label>
+                                            <div class="col-md-7 my-auto">
+
+                                                <input class="form-control" type="text" name="Nombre" id="Nombre"/></div>
+                                        </div>
+
+                                        <div class="form-group row my-3">
+                                            <label class="col-md-3 my-auto" for="Apellido"></i>Apellido:</label>
+                                            <div class="col-md-7 my-auto">
+                                                <input class="form-control" type="text" name="Apellido" id="Apellido"/></div>
+                                        </div>
+                                        <div class="form-group row my-3">
+                                            <label class="col-md-3 my-auto" for="Nombre"></i>Correo:</label>
+                                            <div class="col-md-7 my-auto">
+                                                <input class="form-control" type="text" name="Correo" id="Correo"/></div>
+                                        </div>
+                                            <div class="form-group row my-3">
+                                                <label  class="col-md-5 my-auto"for="Reporte">Reporte:</label>
+                                                <div class="col-md-7 my-auto"></div></div>
+                                            <div class="col text-center">     
+                                                <textarea class="form-control" id="Reporte" name="Reporte" rows="5" required></textarea>
+                                                <div class="col text-center"></div></div>
+                                            <div class="card-footer col text-center">
+                                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                            </div>
+
+                                           </form>
+                                        </div>
+
+
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        </section>
+                    </div>
+                    <footer th:replace ="~{layout/plantilla :: footer}"></footer>
+
+                    </body>
+
+
+                    </html>
